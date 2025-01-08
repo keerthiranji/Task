@@ -45,5 +45,26 @@ public class Task3 {
         System.out.println("Max array:  " + maxArray);
 
 
+        //Problem 4
+        int[] input1 = {26,11,20,10,3,7,18};
+        int pivotalValue1 = 10;
+
+        List<Integer> minArray1 = new ArrayList<>();
+        List<Integer> maxArray1 = new ArrayList<>();
+
+        for(int value : input1) {
+            if(value <= pivotalValue1){
+                minArray1.add(value);
+            } else {
+                maxArray1.add(value);
+            }
+        }
+
+        System.out.println("Min array:  " + minArray1);
+        System.out.println("Max array:  " + maxArray1);
+
+
+
+
     }
 }
