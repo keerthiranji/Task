@@ -35,6 +35,7 @@ public class Task4 {
         System.out.println("Subarray: " + Arrays.toString(subArray));
 
 
+
         //Problem 3
         int[] array = {10, 25, 9, 67, 54, 23, 6, 20, 11, 45};
 
