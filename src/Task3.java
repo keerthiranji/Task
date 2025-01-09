@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -6,28 +7,30 @@ public class Task3 {
     public static void main(String[] args) {
         //problem 1
         //find maximum value
-        int[] array = {2, 6, 11, 20, 3, 7, 18};
-        int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if(array[i] > max){
-                max = array[i];
+        int[] values = {2, 6, 11, 20, 3, 7, 18};
+        int max = values[0];
+
+        for (int i = 0; i < values.length; i++) {
+            if(values[i] > max){
+                //values[i] -- values of index
+                max = values[i];
             }
         }
-        System.out.println(("The maximum value of the array is:  " + max));
+        System.out.println(("The maximum value of the values is:  " + max));
 
         //problem 2
         //find minimum value
         int[] array1 = {2, 6, 11, 20, 3, 7, 18};
-        int min = array[0];
+        int min = values[0];
         for (int i = 0; i < array1.length; i++) {
             if(array1[i] <  min){
                 min = array1[i];
             }
         }
-        System.out.println(("The minimum value of the array is:  " + min));
+        System.out.println(("The minimum value of the values is:  " + min));
 
         //problem 3
-        int[] input = {2,6,11,20,3,7,18};
+/*        int[] input = {2,6,11,20,3,7,18};
         int pivotalValue = 10;
 
         List<Integer> minArray = new ArrayList<>();
@@ -41,8 +44,43 @@ public class Task3 {
             }
         }
 
-        System.out.println("Min array:  " + minArray);
-        System.out.println("Max array:  " + maxArray);
+        System.out.println("Min values:  " + minArray);
+        System.out.println("Max values:  " + maxArray);*/
+
+
+        //prob 3
+        // Count the number of elements for each array
+        int[] input = {2,6,11,20,3,7,18};
+        int pivotalValue = 10;
+
+        int minCount = 0, maxCount = 0;
+
+        for (int value : input) {
+            if (value <= pivotalValue) {
+                minCount++;
+            } else {
+                maxCount++;
+            }
+        }
+
+        // Initialize arrays with determined sizes
+        int[] minArray = new int[minCount];
+        int[] maxArray = new int[maxCount];
+
+        // Populate the arrays
+        int minIndex = 0, maxIndex = 0;
+
+        for (int value : input) {
+            if (value <= pivotalValue) {
+                minArray[minIndex++] = value;
+            } else {
+                maxArray[maxIndex++] = value;
+            }
+        }
+
+        // Print the results
+        System.out.println("Min values: " + Arrays.toString(minArray));
+        System.out.println("Max values: " + Arrays.toString(maxArray));
 
 
         //Problem 4
@@ -60,10 +98,8 @@ public class Task3 {
             }
         }
 
-        System.out.println("Min array:  " + minArray1);
-        System.out.println("Max array:  " + maxArray1);
-
-
+        System.out.println("Min values:  " + minArray1);
+        System.out.println("Max values:  " + maxArray1);
 
 
     }

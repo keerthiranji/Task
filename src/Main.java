@@ -19,7 +19,7 @@ public class Main {
         System.out.println( "answer: " + isPresent);
 
 
-        //anpther way
+        //another way
         String[] myArray1 = {"1", "a", "3"};
         boolean isPresent1 = false;
 
