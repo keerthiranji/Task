@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Task5 {
+public class CollectingVowCon {
     public static void main(String[] args) {
         char[] inputArray = {'a', 'z', '4', 'i', 'm', '7'};
 
